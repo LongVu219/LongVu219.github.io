@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Long Vu</title>
+  <meta name="description" content="Long Vu - AI Resident at Qualcomm AI Research working on controllable video generation, world models and robot learning." />
+  <meta name="author" content="Long Vu" />
+  <meta property="og:title" content="Long Vu" />
+  <meta property="og:description" content="Controllable video generation and world models for robot learning." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://longvu219.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f56c9'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle'%3ELV%3C/text%3E%3C/svg%3E" />
+  <!-- apply the saved / system theme before first paint so there is no light-to-dark flash -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#about">Long Vu</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch color theme">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section id="about" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">AI Resident · Qualcomm AI Research</p>
+        <h1>Long Vu <span class="native-name" lang="vi">Vũ Văn Long</span></h1>
+        <p class="tagline">Controllable video generation and world models for robot learning.</p>
+        <p class="bio">
+          I am an AI Resident at Qualcomm AI Research in Hanoi, Vietnam. I build video diffusion models
+          that follow explicit camera and object motion (<a href="#publications">UniCaMo</a>), and action-conditioned
+          world models that generate training data for robot policies (RoboDream). I graduated with High Distinction in Artificial
+          Intelligence from VNU University of Engineering and Technology in 2026.
+        </p>
+        <p class="bio">I am applying to Ph.D. programs for Fall 2027.</p>
+        <ul class="link-row">
+          <li><a class="pill" href="mailto:vlong@qti.qualcomm.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a></li>
+          <li><a class="pill" href="cv/Long_Vu_CV.pdf">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>CV</a></li>
+          <li><a class="pill" href="https://scholar.google.com/citations?user=cKR7wd4AAAAJ&amp;hl=en">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>Google Scholar</a></li>
+          <li><a class="pill" href="https://github.com/LongVu219">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub</a></li>
+        </ul>
+      </div>
+      <!-- portrait: put a square photo at images/profile.jpg and swap the monogram span for
+           <img src="images/profile.jpg" alt="Long Vu" /> -->
+      <div class="portrait" aria-hidden="true"><span class="monogram">LV</span></div>
+    </section>
+
+    <!-- ============ RESEARCH ============ -->
+    <section id="research" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Research</p>
+        <h2>What I work on</h2>
+      </div>
+      <p class="section-lead">
+        I study generative models of how the physical world moves: how to make that motion controllable,
+        and how to use it to teach robots.
+      </p>
+      <div class="themes">
+        <article class="theme">
+          <span class="theme-num">01</span>
+          <h3>Controllable video generation</h3>
+          <p>Steering large video diffusion models with camera paths and object trajectories, without adding control branches.</p>
+        </article>
+        <article class="theme">
+          <span class="theme-num">02</span>
+          <h3>World models</h3>
+          <p>Action-conditioned video models that imagine how a scene evolves as a robot acts in it.</p>
+        </article>
+        <article class="theme">
+          <span class="theme-num">03</span>
+          <h3>Robot learning</h3>
+          <p>Turning imagined rollouts into training data for vision-language-action policies such as π<sub>0.5</sub>.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PUBLICATIONS & PROJECTS ============ -->
+    <section id="publications" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Selected work</p>
+        <h2>Publications &amp; projects</h2>
+      </div>
+
+      <!-- UniCaMo: media is served from the project page hosted by co-author Phong Nguyen-Ha -->
+      <article class="work">
+        <div class="work-media">
+          <figure class="clip" data-clip tabindex="0" role="button" aria-pressed="false" aria-label="UniCaMo result. Activate to show the control signal.">
+            <video muted loop playsinline preload="auto"
+                   src="https://phongnhhn.info/Unicamo/teaser/joint_control/1.mp4"></video>
+            <img class="control" alt="Control signal used to generate this clip (blue: object trajectories, red: camera path)"
+                 src="https://phongnhhn.info/Unicamo/teaser/joint_control/1.png" loading="lazy" />
+            <figcaption class="clip-tag"><span class="tag-result">Generated</span><span class="tag-control">Control signal</span></figcaption>
+          </figure>
+          <div class="clip-tabs" role="group" aria-label="Choose a UniCaMo example">
+            <button type="button" class="active" aria-pressed="true" data-src="joint_control/1">Joint</button>
+            <button type="button" aria-pressed="false" data-src="motion_control/1">Object</button>
+            <button type="button" aria-pressed="false" data-src="camera_control/2">Camera</button>
+          </div>
+        </div>
+        <div class="work-body">
+          <p class="meta"><span class="venue">arXiv 2026</span><span class="dot">·</span>Co-first author</p>
+          <h3>UniCaMo: Unified Camera and Motion Control for Video Diffusion Models</h3>
+          <p class="authors"><strong>Long Vu</strong>*, Tan Ngo*, Animesh Karnewar, Amir Habibian, Binh-Son Hua, Hung Bui, Minh Hoai Nguyen, Phong Nguyen-Ha <span class="eq-note">(* equal contribution)</span></p>
+          <p>
+            Controls object trajectories and camera motion together by constructing the initial noise of
+            a video diffusion model in 3D. No adapters or architecture changes, only LoRA fine-tuning of Wan 2.1 14B.
+            State of the art on MoveBench in both video quality and motion accuracy.
+          </p>
+          <ul class="work-links">
+            <li><a href="https://phongnhhn.info/Unicamo/">Project page</a></li>
+            <li><a href="https://arxiv.org/abs/2607.02798">arXiv</a></li>
+            <li><a href="https://phongnhhn.info/data/bib/unicamo.bib">BibTeX</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- RoboDream: ongoing, no public media, so the key result is drawn instead -->
+      <article class="work">
+        <div class="work-media">
+          <figure class="result-card">
+            <figcaption>
+              <span class="result-title">π<sub>0.5</sub> task success</span>
+              <span class="result-sub">MolmoSpaces pick-and-place (simulation)</span>
+            </figcaption>
+            <ul class="bars">
+              <li title="Base π0.5-DROID: 13.6%">
+                <span class="bar-label">Base π<sub>0.5</sub>-DROID</span>
+                <span class="bar-track"><span class="bar" style="--v:13.6"></span></span>
+                <span class="bar-value">13.6%</span>
+              </li>
+              <li title="Fine-tuned on a small real dataset: 17.9%">
+                <span class="bar-label">+ real data</span>
+                <span class="bar-track"><span class="bar" style="--v:17.9"></span></span>
+                <span class="bar-value">17.9%</span>
+              </li>
+              <li class="hl" title="Fine-tuned on the real data plus RoboDream synthesized data: 23.1%">
+                <span class="bar-label">+ RoboDream data</span>
+                <span class="bar-track"><span class="bar" style="--v:23.1"></span></span>
+                <span class="bar-value">23.1%</span>
+              </li>
+            </ul>
+          </figure>
+        </div>
+        <div class="work-body">
+          <p class="meta"><span class="venue">Ongoing</span><span class="dot">·</span>Qualcomm AI Research</p>
+          <h3>RoboDream: High-Quality Data Generation for Robotic Manipulation</h3>
+          <p>
+            Small robot datasets limit what a policy can learn. I built RoboDream's end-to-end pipeline: it
+            fine-tunes an action-conditioned world model, rolls out a policy inside it, filters the imagined
+            episodes, and trains vision-language-action policies on the result. Adding the synthesized data
+            raises π<sub>0.5</sub> pick-and-place success from 17.9% to 23.1% in simulation, and improves
+            success by 10% on a real robot.
+          </p>
+        </div>
+      </article>
+
+      <!-- IQAGA -->
+      <article class="work">
+        <div class="work-media">
+          <div class="type-card" aria-hidden="true">
+            <span class="type-big">IQAGA</span>
+            <span class="type-small">Person re-identification</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <p class="meta"><span class="venue">SOICT 2023</span></p>
+          <h3>IQAGA: Image Quality Assessment-Driven Learning with GAN-Based Dataset Augmentation for Cross-Domain Person Re-Identification</h3>
+          <p class="authors">Dang H. Pham, Anh D. Nguyen, <strong>Long V. Vu</strong>, Hoa N. Nguyen</p>
+          <p>
+            StarGAN-based augmentation with a quality-aware loss that down-weights poor generated images,
+            improving cross-domain re-identification by 2.3 mAP and 3.4 Rank-1.
+          </p>
+          <ul class="work-links">
+            <li><a href="https://dl.acm.org/doi/10.1145/3628797.3628961">Paper</a></li>
+            <li><a href="https://github.com/LongVu219/IQAGA">Code</a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ EXPERIENCE / EDUCATION / HONORS ============ -->
+    <section id="experience" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Background</p>
+        <h2>Experience &amp; education</h2>
+      </div>
+      <div class="cols">
+        <div>
+          <h3 class="col-title">Experience</h3>
+          <ol class="timeline">
+            <li>
+              <span class="when">2025 – now</span>
+              <div><strong>AI Resident</strong>, Qualcomm AI Research, Hanoi
+                <p>Video generation, world models and robot manipulation.</p></div>
+            </li>
+            <li>
+              <span class="when">2024</span>
+              <div><strong>AI Engineer</strong>, Oraichain Lab, Hanoi
+                <p>Human-animation video generation.</p></div>
+            </li>
+            <li>
+              <span class="when">2022 – 2023</span>
+              <div><strong>Research Student</strong>, IAI, VNU-UET, Hanoi
+                <p>Deep learning research and reproducible model pipelines.</p></div>
+            </li>
+          </ol>
+          <h3 class="col-title">Education</h3>
+          <ol class="timeline">
+            <li>
+              <span class="when">2022 – 2026</span>
+              <div><strong>Artificial Intelligence</strong>, VNU University of Engineering and Technology
+                <p>High Distinction · GPA 3.74 / 4.00 · top 5 of the graduating cohort.</p></div>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="col-title">Honors</h3>
+          <ol class="timeline">
+            <li><span class="when">2024</span><div><strong>Bronze Medal</strong>, ICPC Asia Regional Contest</div></li>
+            <li><span class="when">2024</span><div><strong>First Prize</strong>, Scientific Research Conference for Undergraduates</div></li>
+            <li><span class="when">2022 – 2024</span><div><strong>Second Prize</strong>, ACM/ICPC Vietnam National Contest (three times)</div></li>
+            <li><span class="when">2021</span><div><strong>Third Prize</strong>, Vietnam National Olympiad in Informatics</div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ CONTACT ============ -->
+  <footer id="contact" class="footer">
+    <p class="footer-lead">Happy to talk about video generation, world models or robot learning.</p>
+    <a class="footer-mail" href="mailto:vlong@qti.qualcomm.com">vlong@qti.qualcomm.com</a>
+    <p class="footer-note">© 2026 Long Vu · Updated October 2026</p>
+  </footer>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
