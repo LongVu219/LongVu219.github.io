@@ -10,6 +10,7 @@
   --accent: #2f56c9;
   --accent-ink: #2647ab;
   --accent-soft: #e9eefb;
+  --qc-logo: #3253dc; /* added: Qualcomm brand blue for the logo (light theme) */
   --bar-muted: #c9ccd3;
   --shadow: 0 1px 2px rgba(20, 22, 28, 0.04), 0 8px 24px rgba(20, 22, 28, 0.06);
   --radius: 14px;
@@ -29,6 +30,7 @@
   --accent: #8eaeff;
   --accent-ink: #a9c1ff;
   --accent-soft: #1b2440;
+  --qc-logo: #eceef2; /* added: white reversed logo on the dark theme */
   --bar-muted: #3a404c;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
   color-scheme: dark;
@@ -46,6 +48,7 @@
     --accent: #8eaeff;
     --accent-ink: #a9c1ff;
     --accent-soft: #1b2440;
+    --qc-logo: #eceef2; /* added: white reversed logo on the dark theme */
     --bar-muted: #3a404c;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
     color-scheme: dark;
@@ -215,6 +218,19 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
   box-shadow: var(--shadow);
 }
 .portrait img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Qualcomm affiliation badge under the portrait */
+.hero-side { display: flex; flex-direction: column; align-items: center; gap: 20px; } /* added: stacks photo over badge */
+.affiliation { /* added: whole badge is one link */
+  display: flex; flex-direction: column; align-items: center; gap: 3px; /* added: logo, role, date stacked */
+  width: 100%; padding-top: 16px; border-top: 1px solid var(--line); /* added: hairline like the reference strip */
+  text-align: center; color: var(--ink-2); transition: color 0.15s; /* added: text inherits ink, accent on hover */
+}
+.affiliation:hover { color: var(--accent-ink); text-decoration: none; } /* added: hover tint, no underline */
+.affiliation-logo { width: 150px; height: auto; fill: var(--qc-logo); margin-bottom: 8px; transition: transform 0.15s; } /* added: themed wordmark */
+.affiliation:hover .affiliation-logo { transform: translateY(-1px); } /* added: same lift as the pills */
+.affiliation-role { font-size: 0.8rem; font-weight: 500; } /* added */
+.affiliation-date { font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; } /* added */
 .monogram { font-family: var(--serif); font-size: 4.4rem; font-weight: 500; color: var(--ink); letter-spacing: -0.02em; }
 
 /* ---------- Research themes ---------- */
@@ -422,7 +438,11 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
   .clip-tabs button { padding: 8px 14px; }
   main { padding: 0 16px; }
   .hero { grid-template-columns: 1fr; gap: 28px; padding: 40px 0 16px; }
-  .portrait { width: 132px; order: -1; }
+  .hero-side { order: -1; flex-direction: row; justify-content: flex-start; gap: 18px; } /* added: photo left, badge right on phones */
+  .portrait { width: 112px; flex: none; } /* changed: 132px -> 112px to fit the badge beside it; order moved to .hero-side */
+  .affiliation { width: auto; align-items: flex-start; text-align: left; padding: 4px 0 4px 16px; border-top: 0; border-left: 1px solid var(--line); } /* added: vertical hairline instead of top */
+  .affiliation-logo { width: 120px; margin-bottom: 6px; } /* added: smaller wordmark on phones */
+  .hero .eyebrow { display: none; } /* added: the badge right above already says AI Resident · Qualcomm AI Research */
   .monogram { font-size: 2.6rem; }
   .section { padding-top: 56px; }
   .timeline li { grid-template-columns: 1fr; gap: 0; }
@@ -431,5 +451,5 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .pill, .clip .control { transition: none; }
+  .pill, .clip .control, .affiliation, .affiliation-logo { transition: none; } /* changed: also stop the badge transitions */
 }
