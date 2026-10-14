@@ -246,10 +246,10 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 .theme h3 { font-family: var(--serif); font-size: 1.28rem; line-height: 1.25; margin: 8px 0 8px; }
 .theme p { color: var(--ink-2); font-size: 0.95rem; }
 
-/* Research approach quote under the theme cards */
-.approach { margin-top: 28px; max-width: 680px; padding: 2px 0 2px 20px; border-left: 2px solid var(--accent); } /* added: accent rule on the left */
-.approach-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; } /* added: same look as .col-title */
-.approach-text { font-family: var(--serif); font-size: clamp(1.15rem, 2.2vw, 1.35rem); line-height: 1.4; color: var(--ink); text-wrap: balance; } /* added: serif pull-quote */
+/* Research philosophy quote under the theme cards */
+.philosophy { margin-top: 28px; max-width: 720px; padding: 2px 0 2px 20px; border-left: 2px solid var(--accent); } /* changed: renamed from .approach, 680 -> 720px for the longer text */
+.philosophy-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; } /* changed: renamed from .approach-label */
+.philosophy-text { font-family: var(--serif); font-size: clamp(1.1rem, 2vw, 1.25rem); line-height: 1.45; color: var(--ink); text-wrap: pretty; } /* changed: renamed; smaller and pretty-wrapped for three sentences */
 
 /* ---------- Work rows ---------- */
 .work {
@@ -279,7 +279,6 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
 .authors { font-size: 0.9rem; color: var(--muted); margin-bottom: 10px; }
 .authors strong { color: var(--ink); font-weight: 600; }
-.eq-note { white-space: nowrap; font-size: 0.85em; }
 
 .work-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 14px; font-size: 0.92rem; font-weight: 500; }
 .work-links a::after { content: " \2197"; font-size: 0.8em; }

@@ -73,6 +73,8 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>Google Scholar</a></li>
           <li><a class="pill" href="https://github.com/LongVu219">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub</a></li>
+          <li><a class="pill" href="https://www.linkedin.com/in/long-vu-aba53b267/"> <!-- added: LinkedIn -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a></li> <!-- added: outline icon in the same style as the others -->
         </ul>
       </div>
       <div class="hero-side"> <!-- added: photo + affiliation column -->
@@ -112,9 +114,13 @@
           <p>Turning imagined rollouts into training data for vision-language-action policies such as π<sub>0.5</sub>.</p>
         </article>
       </div>
-      <div class="approach"> <!-- added: research approach quote -->
-        <h3 class="approach-label">Research approach</h3> <!-- added -->
-        <p class="approach-text">I do research for the love of the game: I love the process of delving into the unknown.</p> <!-- added: user's words, lightly edited -->
+      <div class="philosophy"> <!-- changed: approach -> philosophy -->
+        <h3 class="philosophy-label">Research philosophy</h3> <!-- changed: "Research approach" -> "Research philosophy" -->
+        <p class="philosophy-text"> <!-- changed: new text, user's words lightly edited ("commonly cited" hedges the 80% figure; "gain" common sense) -->
+          I am pursuing AGI, or at least something close to it. That is why I work on computer vision: by a commonly cited
+          estimate, about 80% of the information people take in comes through their eyes. I believe that for models
+          to gain common sense, they need strong reasoning that comes directly from vision.
+        </p>
       </div> <!-- added -->
     </section>
 
@@ -142,9 +148,9 @@
           </div>
         </div>
         <div class="work-body">
-          <p class="meta"><span class="venue">arXiv 2026</span><span class="dot">·</span>Co-first author</p>
+          <p class="meta"><span class="venue">arXiv 2026</span><span class="dot">·</span>First author</p> <!-- changed: Co-first author -> First author, to match the bio -->
           <h3>UniCaMo: Unified Camera and Motion Control for Video Diffusion Models</h3>
-          <p class="authors"><strong>Long Vu</strong>*, Tan Ngo*, Animesh Karnewar, Amir Habibian, Binh-Son Hua, Hung Bui, Minh Hoai Nguyen, Phong Nguyen-Ha <span class="eq-note">(* equal contribution)</span></p>
+          <p class="authors"><strong>Long&nbsp;Vu</strong>*, Tan&nbsp;Ngo*, Animesh&nbsp;Karnewar, Amir&nbsp;Habibian, Binh&#8209;Son&nbsp;Hua, Hung&nbsp;Bui, Minh&nbsp;Hoai&nbsp;Nguyen, Phong&nbsp;Nguyen&#8209;Ha</p> <!-- changed: removed the "(* equal contribution)" note, asterisks kept; nbsp / non-breaking hyphens so lines break only between names -->
           <p>
             Controls object trajectories and camera motion together by constructing the initial noise of
             a video diffusion model in 3D. No adapters or architecture changes, only LoRA fine-tuning of Wan 2.1 14B.
